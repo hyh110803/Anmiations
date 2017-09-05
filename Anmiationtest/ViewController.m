@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property(nonatomic,strong)UILabel *timeLabe;
 
 @end
 
@@ -18,7 +19,38 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
     
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    
+    
+    UILabel *timeLable = [[UILabel alloc]initWithFrame:CGRectMake(50, 100, 200, 60)];
+    
+    timeLable.font=[UIFont systemFontOfSize:30];
+    [self.view addSubview:timeLable];
+    self.timeLabe=timeLable;
+
+}
+
+NSString *dateStringsss;
+
+-(void)updateTime{
+
+    NSDate *currentDate = [NSDate date];
+    
+    NSDateFormatter *dataFormatter = [[NSDateFormatter alloc]init];
+    
+    [dataFormatter setDateFormat:@"HH : mm : ss"];
+    
+    NSString *dateString = [dataFormatter stringFromDate:currentDate];
+    NSLog(@"%@",dateString);
+    
+    if (![dateStringsss isEqualToString:dateString]) {
+        NSLog(@"---");
+        dateStringsss=dateString;
+    }
+    
+    self.timeLabe.text = dateString;
     
 }
 

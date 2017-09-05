@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					CBB0F40A1F0B831F00F4A8A0 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = S7L9UM7CPL;
 						ProvisioningStyle = Automatic;
 					};
 					CBB0F4231F0B832000F4A8A0 = {
@@ -426,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S7L9UM7CPL;
 				INFOPLIST_FILE = Anmiationtest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fitouch.Test.Anmiationtest;
@@ -437,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S7L9UM7CPL;
 				INFOPLIST_FILE = Anmiationtest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Fitouch.Test.Anmiationtest;
